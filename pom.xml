@@ -1,0 +1,223 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements. See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership. The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License. You may obtain a copy of the License at
+ 
+  http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied. See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>org.apache</groupId>
+        <artifactId>apache</artifactId>
+        <version>7</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.apache.cxf.build-utils</groupId>
+    <artifactId>cxf-build-utils</artifactId>
+    <version>2.3.0-SNAPSHOT</version>
+    <name>Apache CXF Build Utilities</name>
+    <url>http://cxf.apache.org</url>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>buildtools</module>
+        <module>xml2fastinfoset-plugin</module>
+        <module>xml2fastinfoset-test</module>
+    </modules>
+
+    <distributionManagement>
+        <site>
+            <id>apache.cxf.site</id>
+            <url>scpexe://people.apache.org/www/cxf.apache.org/cxf/mvn_site/build-tutils</url>
+        </site>
+    </distributionManagement>
+    <inceptionYear>2006</inceptionYear>
+
+    <mailingLists>
+        <mailingList>
+            <name>Apache CXF User List</name>
+            <subscribe>users-subscribe@cxf.apache.org</subscribe>
+            <unsubscribe>users-unsubscribe@cxf.apache.org</unsubscribe>
+            <post>users@cxf.apache.org</post>
+            <archive>http://mail-archives.apache.org/mod_mbox/cxf-users</archive>
+        </mailingList>
+        <mailingList>
+            <name>Apache CXF Developer List</name>
+            <subscribe>dev-subscribe@cxf.apache.org</subscribe>
+            <unsubscribe>dev-unsubscribe@cxf.apache.org</unsubscribe>
+            <post>dev@cxf.apache.org</post>
+            <archive>http://mail-archives.apache.org/mod_mbox/cxf-dev</archive>
+        </mailingList>
+        <mailingList>
+            <name>Apache CXF Commits List</name>
+            <subscribe>commits-subscribe@cxf.apache.org</subscribe>
+            <unsubscribe>commits-unsubscribe@cxf.apache.org</unsubscribe>
+            <post>commits@cxf.apache.org</post>
+            <archive>http://mail-archives.apache.org/mod_mbox/cxf-commits</archive>
+        </mailingList>
+        <mailingList>
+            <name>Apache CXF Issues List</name>
+            <subscribe>issues-subscribe@cxf.apache.org</subscribe>
+            <unsubscribe>issues-unsubscribe@cxf.apache.org</unsubscribe>
+            <post>issues@cxf.apache.org</post>
+            <archive>http://mail-archives.apache.org/mod_mbox/cxf-issues</archive>
+        </mailingList>
+        <mailingList>
+            <name>Apache CXF Build Notifications List</name>
+            <subscribe>notifications-subscribe@cxf.apache.org</subscribe>
+            <unsubscribe>notifications-unsubscribe@cxf.apache.org</unsubscribe>
+            <post>notifications@cxf.apache.org</post>
+            <archive>http://mail-archives.apache.org/mod_mbox/cxf-notifications</archive>
+        </mailingList>
+    </mailingLists>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+
+         <pluginManagement>
+             <plugins>
+                 <plugin>
+                     <groupId>org.codehaus.mojo</groupId>
+                     <artifactId>build-helper-maven-plugin</artifactId>
+                     <version>1.4</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-clean-plugin</artifactId>
+                     <version>2.3</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-install-plugin</artifactId>
+                     <version>2.3</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-release-plugin</artifactId>
+                     <version>2.0-beta-9</version>
+                     <configuration>
+                         <tagBase>https://svn.apache.org/repos/asf/cxf/build-utils/tags</tagBase>
+                         <useReleaseProfile>false</useReleaseProfile>
+                         <preparationGoals>clean install</preparationGoals>
+                         <goals>deploy</goals>
+                         <arguments>-Prelease,deploy</arguments>
+                         <autoVersionSubmodules>true</autoVersionSubmodules>
+                     </configuration>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-javadoc-plugin</artifactId>
+                     <version>2.5</version>
+                     <configuration>
+                         <attach>true</attach>
+                         <source>1.5</source>
+                         <quiet>true</quiet>
+                         <bottom>Apache CXF</bottom>
+                         <javadocVersion>1.5</javadocVersion>
+                         <encoding>UTF-8</encoding>
+                         <!--subpackages>org.apache.cxf</subpackages-->
+                     </configuration>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-surefire-plugin</artifactId>
+                     <version>2.5</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-compiler-plugin</artifactId>
+                     <version>2.0.2</version>
+                     <configuration>
+                         <source>1.5</source>
+                         <target>1.5</target>
+                         <maxmem>256M</maxmem>
+                     </configuration>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-antrun-plugin</artifactId>
+                     <version>1.3</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-jar-plugin</artifactId>
+                     <version>2.2</version>
+                     <configuration>
+                         <archive>
+                             <manifestEntries>
+                                 <Specification-Title>${name}</Specification-Title>
+                                 <Specification-Vendor>The Apache Software Foundation</Specification-Vendor>
+                                 <Specification-Version>${version}</Specification-Version>
+                                 <Implementation-Title>${name}</Implementation-Title>
+                                 <Implementation-Vendor-Id>org.apache</Implementation-Vendor-Id>
+                                 <Implementation-Vendor>The Apache Software Foundation</Implementation-Vendor>
+                                 <Implementation-Version>${version}</Implementation-Version>
+                             </manifestEntries>
+                         </archive>
+                     </configuration>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-resources-plugin</artifactId>
+                     <version>2.3</version>
+                     <configuration>
+                         <encoding>UTF-8</encoding>
+                     </configuration>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-assembly-plugin</artifactId>
+                     <version>2.2-beta-4</version>
+                 </plugin>
+
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-dependency-plugin</artifactId>
+                     <version>2.1</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-shade-plugin</artifactId>
+                     <version>1.2.1</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-site-plugin</artifactId>
+                     <version>2.0.1</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-deploy-plugin</artifactId>
+                     <version>2.4</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-surefire-report-plugin</artifactId>
+                     <version>2.5</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-project-info-reports-plugin</artifactId>
+                     <version>2.1.1</version>
+                 </plugin>
+                 <plugin>
+                     <groupId>org.apache.maven.plugins</groupId>
+                     <artifactId>maven-plugin-plugin</artifactId>
+                     <version>2.5</version>
+                 </plugin>
+             </plugins>
+         </pluginManagement>
+    </build>
+</project>
