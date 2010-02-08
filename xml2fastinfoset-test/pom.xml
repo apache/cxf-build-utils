@@ -53,8 +53,9 @@
                         </goals>
                     </execution>
                 </executions>
-                <groupId>org.apache.cxf</groupId>
+                <groupId>org.apache.cxf.build-utils</groupId>
                 <artifactId>cxf-xml2fastinfoset-plugin</artifactId>
+                <version>${project.version}</version>
             </plugin>
         </plugins>
     </build>

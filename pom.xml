@@ -40,7 +40,7 @@
     <distributionManagement>
         <site>
             <id>apache.cxf.site</id>
-            <url>scpexe://people.apache.org/www/cxf.apache.org/cxf/mvn_site/build-tutils</url>
+            <url>scpexe://people.apache.org/www/cxf.apache.org/cxf/mvn_site/build-utils</url>
         </site>
     </distributionManagement>
     <inceptionYear>2006</inceptionYear>
