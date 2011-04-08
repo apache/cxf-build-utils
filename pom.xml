@@ -47,8 +47,8 @@
     <scm>
       <connection>scm:svn:http://svn.apache.org/repos/asf/cxf/build-utils/trunk</connection>
       <developerConnection>scm:svn:https://svn.apache.org/repos/asf/cxf/build-utils/trunk</developerConnection>
-      <url>http://svn.apache.org/viewvc/maven/pom/tags/apache-7/cxf-build-utils</url>
-  </scm>
+      <url>http://svn.apache.org/repos/asf/cxf/build-utils/trunk</url>
+    </scm>
     <mailingLists>
         <mailingList>
             <name>Apache CXF User List</name>
@@ -116,7 +116,7 @@
                          <useReleaseProfile>false</useReleaseProfile>
                          <preparationGoals>clean install</preparationGoals>
                          <goals>deploy</goals>
-                         <arguments>-Prelease,deploy</arguments>
+                         <arguments>-Prelease,deploy,apache-release</arguments>
                          <autoVersionSubmodules>true</autoVersionSubmodules>
                      </configuration>
                  </plugin>
