@@ -497,5 +497,35 @@
             </organization>
         </project>
     </supplement>
+    <supplement>
+        <project>
+            <groupId>isorelax</groupId>
+            <artifactId>isorelax</artifactId>
+            <name>ISO Relax</name>
+            <url>http://iso-relax.sourceforge.net/</url>
+            <licenses>
+                <license>
+                    <name>MIT</name>
+                    <url>http://www.opensource.org/licenses/mit-license.html</url>
+                    <distribution>repo</distribution>
+                </license>
+            </licenses>
+        </project>
+    </supplement>
+    <supplement>
+        <project>
+            <groupId>relaxngDatatype</groupId>
+            <artifactId>relaxngDatatype</artifactId>
+            <name>RELAX NG Datatype</name>
+            <url>http://sourceforge.net/projects/relaxng/</url>
+            <licenses>
+                <license>
+                    <name>BSD</name>
+                    <url>http://www.opensource.org/licenses/bsd-license.php</url>
+                    <distribution>repo</distribution>
+                </license>
+            </licenses>
+        </project>
+    </supplement>
 
 </supplementalDataModels>
