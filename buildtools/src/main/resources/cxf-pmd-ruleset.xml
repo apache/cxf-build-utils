@@ -196,7 +196,7 @@
             <property name="xpath">
                 <value>
 <![CDATA[
-//PrimaryPrefix/Name[ends-with(@Image, 'Logger.getLogger') and //PackageDeclaration/Name[starts-with(@Image, 'org.apache.cxf')]]
+//PrimaryPrefix/Name[ends-with(@Image, 'Logger.getLogger') and //PackageDeclaration/Name[starts-with(@Image, 'org.apache.cxf')] and not(//ExtendsList/ClassOrInterfaceType[contains(@Image, 'Service')])]
 ]]>
                 </value>
             </property>
