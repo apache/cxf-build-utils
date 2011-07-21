@@ -50,6 +50,7 @@ import org.codehaus.plexus.util.DirectoryScanner;
  * 
  * @goal xml2fastinfoset
  * @phase process-resources
+ * @threadSafe
  */
 public class XML2FastInfosetCompilerMojo extends AbstractMojo {
     private static final String[] EMPTY_STRING_ARRAY = {};
