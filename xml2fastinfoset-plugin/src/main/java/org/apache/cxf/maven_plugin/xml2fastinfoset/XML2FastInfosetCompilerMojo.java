@@ -35,6 +35,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.sonatype.plexus.build.incremental.BuildContext;
 import org.xml.sax.SAXException;
 
 import com.sun.xml.fastinfoset.sax.SAXDocumentSerializer;
@@ -44,6 +45,7 @@ import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.DirectoryScanner;
+import org.codehaus.plexus.util.Scanner;
 
 /**
  * Compile XML resources to FastInfoset XML resources.
@@ -93,6 +95,10 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
      * @required
      */
     private File outputDirectory;
+    
+    /** @component */
+    protected BuildContext buildContext;
+        
 
     @SuppressWarnings("unchecked")
     public void execute() throws MojoExecutionException {
@@ -111,10 +117,8 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
                 continue;
             }
 
+            Scanner scanner = buildContext.newScanner(resourceDirectory);
 
-            DirectoryScanner scanner = new DirectoryScanner();
-
-            scanner.setBasedir(resourceDirectory);
             if (includes != null && !includes.isEmpty()) {
                 scanner.setIncludes((String[])includes.toArray(EMPTY_STRING_ARRAY));
             } else {
@@ -166,6 +170,7 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
                 } catch (Exception e) {
                     throw new MojoExecutionException("Error copying resource " + source, e);
                 }
+                buildContext.refresh(destinationFile);
             }
 
         }
