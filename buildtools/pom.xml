@@ -73,9 +73,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>pmd</groupId>
+            <groupId>net.sourceforge.pmd</groupId>
             <artifactId>pmd</artifactId>
-            <version>4.3</version>
+            <version>5.0.2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
