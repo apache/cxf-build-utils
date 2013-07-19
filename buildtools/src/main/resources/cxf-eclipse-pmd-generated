@@ -105,26 +105,8 @@
             <ruleset>Design</ruleset>
         </rule>
         <rule>
-            <name>UnnecessaryLocalBeforeReturn</name>
-            <ruleset>Design</ruleset>
-        </rule>
-
-        <rule>
             <name>LoggerIsNotStaticFinal</name>
             <ruleset>Java Logging</ruleset>
-        </rule>
-
-        <rule>
-            <name>UnusedLocalVariable</name>
-            <ruleset>Unused Code</ruleset>
-        </rule>
-        <rule>
-            <name>UnusedPrivateField</name>
-            <ruleset>Unused Code</ruleset>
-        </rule>
-        <rule>
-            <name>UnusedPrivateMethod</name>
-            <ruleset>Unused Code</ruleset>
         </rule>
     </rules>
 </pmd>
