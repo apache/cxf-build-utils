@@ -18,7 +18,7 @@
   under the License.
 -->
 <pmd>
-    <useProjectRuleSet>false</useProjectRuleSet>
+    <useProjectRuleSet>true</useProjectRuleSet>
     <includeDerivedFiles>false</includeDerivedFiles>
     <violationsAsErrors>true</violationsAsErrors>
     <fullBuildEnabled>true</fullBuildEnabled>
@@ -26,105 +26,4 @@
     <includePatterns>
         <includePattern>*.java</includePattern>
     </includePatterns>
-    <rules>
-        <rule>
-            <name>BooleanInstantiation</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>CollapsibleIfStatements</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>DoubleCheckedLocking</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>EmptyStatementNotInLoop</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>ForLoopShouldBeWhileLoop</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>JumbledIncrementer</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>ReturnFromFinallyBlock</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>UnconditionalIfStatement</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>UnnecessaryConversionTemporary</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>UnnecessaryFinalModifier</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        <rule>
-            <name>UnnecessaryReturn</name>
-            <ruleset>Basic</ruleset>
-        </rule>
-        
-        <rule>
-            <name>AvoidProtectedFieldInFinalClass</name>
-            <ruleset>Design</ruleset>
-        </rule>
-        <rule>
-            <name>ConstructorCallsOverridableMethod</name>
-            <ruleset>Design</ruleset>
-        </rule>
-        <rule>
-            <name>IdempotentOperations</name>
-            <ruleset>Design</ruleset>
-        </rule>
-        <rule>
-            <name>OptimizableToArrayCall</name>
-            <ruleset>Design</ruleset>
-        </rule>
-        <rule>
-            <name>PositionLiteralsFirstInComparisons</name>
-            <ruleset>Design</ruleset>
-        </rule>
-        <rule>
-            <name>SimplifyBooleanExpressions</name>
-            <ruleset>Design</ruleset>
-        </rule>
-        <rule>
-            <name>SimplifyBooleanReturns</name>
-            <ruleset>Design</ruleset>
-        </rule>
-        <rule>
-            <name>SimplifyConditional</name>
-            <ruleset>Design</ruleset>
-        </rule>
-        <rule>
-            <name>UnnecessaryLocalBeforeReturn</name>
-            <ruleset>Design</ruleset>
-        </rule>
-
-        <rule>
-            <name>LoggerIsNotStaticFinal</name>
-            <ruleset>Java Logging</ruleset>
-        </rule>
-
-        <rule>
-            <name>UnusedLocalVariable</name>
-            <ruleset>Unused Code</ruleset>
-        </rule>
-        <rule>
-            <name>UnusedPrivateField</name>
-            <ruleset>Unused Code</ruleset>
-        </rule>
-        <rule>
-            <name>UnusedPrivateMethod</name>
-            <ruleset>Unused Code</ruleset>
-        </rule>
-    </rules>
 </pmd>
