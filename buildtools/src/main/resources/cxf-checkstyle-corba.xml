@@ -193,7 +193,6 @@
 		</module>
 		<!--<module name="RedundantThrows"/>-->
 		<module name="PackageDeclaration" />
-		<module name="JUnitTestCase" />
 		<module name="ReturnCount">
 			<property name="max" value="6" />
 		</module>
