@@ -105,7 +105,7 @@
 			<property name="max" value="75" />
 		</module>
 		<module name="LineLength">
-			<property name="max" value="110" />
+			<property name="max" value="120" />
 		</module>
 		<module name="MethodLength">
 			<property name="max" value="150" />
@@ -113,6 +113,7 @@
 		</module>
 		<module name="ParameterNumber">
 			<property name="max" value="7" />
+            <property name="ignoreOverriddenMethods" value="true"/>
 		</module>
 
 		<!-- Checks for whitespace                               -->
@@ -280,6 +281,7 @@
 		<!--module name="TrailingComment"/-->
 		<module name="Indentation">
 			<property name="caseIndent" value="0" />
+            <property name="lineWrappingIndentation" value="0"/>
 		</module>
 		<!--<module name="RequiredRegexp">-->
 	</module>
