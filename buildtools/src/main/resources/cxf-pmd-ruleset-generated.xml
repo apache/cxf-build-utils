@@ -46,7 +46,7 @@
     <!--<rule ref="rulesets/java/basic.xml/EmptyCatchBlock"/>-->
     <!--<rule ref="rulesets/java/basic.xml/EmptyFinallyBlock"/>-->
     <!--<rule ref="rulesets/java/basic.xml/EmptyIfStmt"/>-->
-    <rule ref="rulesets/java/basic.xml/EmptyStatementNotInLoop"/>
+    <rule ref="rulesets/java/empty.xml/EmptyStatementNotInLoop"/>
     <!--<rule ref="rulesets/java/basic.xml/EmptyStaticInitializer"/>-->
     <!--<rule ref="rulesets/java/basic.xml/EmptySwitchStatements"/>-->
     <!--<rule ref="rulesets/java/basic.xml/EmptySynchronizedBlock"/>-->
@@ -57,9 +57,9 @@
     <!--<rule ref="rulesets/java/basic.xml/OverrideBothEqualsAndHashcode"/>-->
     <rule ref="rulesets/java/basic.xml/ReturnFromFinallyBlock"/>
     <rule ref="rulesets/java/basic.xml/UnconditionalIfStatement"/>
-    <rule ref="rulesets/java/basic.xml/UnnecessaryConversionTemporary"/>
-    <rule ref="rulesets/java/basic.xml/UnnecessaryFinalModifier"/>
-    <rule ref="rulesets/java/basic.xml/UnnecessaryReturn"/>
+    <rule ref="rulesets/java/unnecessary.xml/UnnecessaryConversionTemporary"/>
+    <rule ref="rulesets/java/unnecessary.xml/UnnecessaryFinalModifier"/>
+    <rule ref="rulesets/java/unnecessary.xml/UnnecessaryReturn"/>
     <!--<rule ref="rulesets/java/basic.xml/UselessOverridingMethod"/>-->
 
     <!--<rule ref="rulesets/java/braces.xml/ForLoopsMustUseBraces"/>-->
