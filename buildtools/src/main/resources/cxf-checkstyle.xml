@@ -31,6 +31,8 @@
 -->
 
 <module name="Checker">
+    <property name="severity" value="error"/>
+    
 	<!-- Checks whether files end with a new line.                        -->
 	<!-- See http://checkstyle.sf.net/config_misc.html#NewlineAtEndOfFile -->
 	<!--
@@ -279,8 +281,18 @@
             <property name="lineWrappingIndentation" value="0"/>
 		</module>
 		<!--<module name="RequiredRegexp">-->
+        <module name="SuppressWarningsHolder" />
 	</module>
-    <module name="SuppressionCommentFilter"/>
+    <module name="SuppressionCommentFilter">
+        <property name="offCommentFormat" value="CHECKSTYLE\:OFF"/>
+        <property name="onCommentFormat" value="CHECKSTYLE\:ON"/>
+    </module>
+    <module name="SuppressionCommentFilter">
+        <property name="offCommentFormat" value="CHECKSTYLE.OFF\:([\w\|]+)"/>
+        <property name="onCommentFormat" value="CHECKSTYLE.ON\:([\w\|]+)"/>
+        <property name="checkFormat" value="$1"/>
+    </module>
+    <module name="SuppressWarningsFilter"/>
     <!-- Header checks -->
     <module name="Header">
       <property name="header"
