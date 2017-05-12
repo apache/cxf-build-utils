@@ -5,7 +5,7 @@
             <groupId>javax.ws.rs</groupId>
             <artifactId>jsr311-api</artifactId>
             <name>JSR 311 API</name>
-            <url>https://jsr311.dev.java.net/</url>
+            <url>https://jsr311.java.net/</url>
             <organization>
                 <name>Sun Microsystems</name>
                 <url>http://www.sun.com/</url>
@@ -13,7 +13,7 @@
             <licenses>
                 <license>
                     <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
-                    <url>http://www.sun.com/cddl/cddl.html</url>
+                    <url>https://opensource.org/licenses/cddl1.php</url>
                 </license>
             </licenses>
         </project>
@@ -23,14 +23,15 @@
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
             <name>Sun JAXB Reference Implementation Runtime</name>
+            <url>https://jaxb.java.net/</url>
             <organization>
                 <name>Sun Microsystems</name>
                 <url>http://www.sun.com/</url>
             </organization>
             <licenses>
                 <license>
-                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
-                    <url>http://www.sun.com/cddl/cddl.html</url>
+                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.1 and GPL v2</name>
+                    <url>https://glassfish.java.net/public/CDDL+GPL_1_1.html</url>
                 </license>
             </licenses>
         </project>
@@ -40,14 +41,15 @@
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-xjc</artifactId>
             <name>Sun JAXB Reference Implementation Tools</name>
+            <url>https://jaxb.java.net/</url>
             <organization>
                 <name>Sun Microsystems</name>
                 <url>http://www.sun.com/</url>
             </organization>
             <licenses>
                 <license>
-                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
-                    <url>http://www.sun.com/cddl/cddl.html</url>
+                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.1 and GPL v2</name>
+                    <url>https://glassfish.java.net/public/CDDL+GPL_1_1.html</url>
                 </license>
             </licenses>
         </project>
@@ -57,6 +59,7 @@
             <groupId>com.sun.xml.fastinfoset</groupId>
             <artifactId>FastInfoset</artifactId>
             <name>Sun FastInfoset Implementation</name>
+            <url>https://fi.java.net/</url>
             <organization>
                 <name>Sun Microsystems</name>
                 <url>http://www.sun.com/</url>
@@ -74,14 +77,15 @@
             <groupId>com.sun.xml.messaging.saaj</groupId>
             <artifactId>saaj-impl</artifactId>
             <name>Sun SAAJ Reference Implementation</name>
+            <url>https://saaj.java.net/</url>
             <organization>
                 <name>Sun Microsystems</name>
                 <url>http://www.sun.com/</url>
             </organization>
             <licenses>
                 <license>
-                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
-                    <url>http://www.sun.com/cddl/cddl.html</url>
+                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.1 and GPL v2</name>
+                    <url>https://glassfish.java.net/public/CDDL+GPL_1_1.html</url>
                 </license>
             </licenses>
         </project>
@@ -91,14 +95,15 @@
             <groupId>javax.xml.soap</groupId>
             <artifactId>saaj-api</artifactId>
             <name>Sun SAAJ API</name>
+            <url>https://saaj.java.net/</url>
             <organization>
                 <name>Sun Microsystems</name>
                 <url>http://www.sun.com/</url>
             </organization>
             <licenses>
                 <license>
-                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
-                    <url>http://www.sun.com/cddl/cddl.html</url>
+                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.1 and GPL v2</name>
+                    <url>https://glassfish.java.net/public/CDDL+GPL_1_1.html</url>
                 </license>
             </licenses>
         </project>
@@ -108,14 +113,15 @@
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <name>Java Architecture for XML Binding (JAXB API)</name>
+            <url>https://jaxb.java.net/</url>
             <organization>
                 <name>Sun Microsystems</name>
                 <url>http://www.sun.com/</url>
             </organization>
             <licenses>
                 <license>
-                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</name>
-                    <url>http://www.sun.com/cddl/cddl.html</url>
+                    <name>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.1 and GPL v2</name>
+                    <url>https://glassfish.java.net/public/CDDL+GPL_1_1.html</url>
                 </license>
             </licenses>
         </project>
@@ -163,7 +169,6 @@
             </licenses>
         </project>
     </supplement>
-
     <supplement>
         <project>
             <groupId>jaxen</groupId>
@@ -214,6 +219,7 @@
             <groupId>net.java.dev.stax-utils</groupId>
             <artifactId>stax-utils</artifactId>
             <name>StAX Utilities</name>
+            <url>https://java.net/projects/stax-utils</url>
         </project>
     </supplement>
     <supplement>
