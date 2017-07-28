@@ -122,7 +122,10 @@
 			<property name="tokens"
 				value="ARRAY_INIT,BNOT,DEC,DOT,INC,LNOT,UNARY_MINUS,UNARY_PLUS" />
 		</module>
-		<module name="NoWhitespaceBefore" />
+        <module name="NoWhitespaceBefore">
+            <property name="tokens"
+                value="COMMA, SEMI, POST_INC, POST_DEC" />
+        </module>
 		<module name="OperatorWrap" />
 		<module name="ParenPad" />
 		<module name="TypecastParenPad" />
