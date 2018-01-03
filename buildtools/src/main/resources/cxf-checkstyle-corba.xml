@@ -83,9 +83,13 @@
 		<module name="RedundantImport" />
 		<module name="UnusedImports" />
 		<module name="ImportOrder">
-			<property name="groups"
-				value="java,javax,org.w3c,org.xml,junit,antlr,com,net,org,*" />
-			<property name="ordered" value="true" />
+            <property name="groups" value="java,javax,org.w3c,org.xml,antlr,com,*,/^org\.(easymock|junit)\./" />
+            <property name="ordered" value="true" />
+            <property name="separated" value="true"/>
+            
+            <!-- static imports sorted at the bottom -->
+            <property name="option" value="bottom"/>
+            <property name="sortStaticImportsAlphabetically" value="true"/>
 		</module>
 		<!--
 			<module name="ImportControl">
