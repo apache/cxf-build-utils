@@ -46,8 +46,6 @@
 	<!--<module name="StrictDuplicateCode"/>-->
 
 	<module name="TreeWalker">
-		<!-- Enable FileContentsHolder to allow us to in turn turn on suppression comments -->
-		<module name="FileContentsHolder" />
 		<!-- Checks for Javadoc comments.                     -->
 		<!-- See http://checkstyle.sf.net/config_javadoc.html -->
 		<!--
@@ -280,17 +278,17 @@
             <property name="lineWrappingIndentation" value="0"/>
 		</module>
 		<!--<module name="RequiredRegexp">-->
+        <module name="SuppressionCommentFilter">
+            <property name="offCommentFormat" value="CHECKSTYLE\:OFF"/>
+            <property name="onCommentFormat" value="CHECKSTYLE\:ON"/>
+        </module>
+        <module name="SuppressionCommentFilter">
+            <property name="offCommentFormat" value="CHECKSTYLE.OFF\:([\w\|]+)"/>
+            <property name="onCommentFormat" value="CHECKSTYLE.ON\:([\w\|]+)"/>
+            <property name="checkFormat" value="$1"/>
+        </module>
         <module name="SuppressWarningsHolder" />
 	</module>
-    <module name="SuppressionCommentFilter">
-        <property name="offCommentFormat" value="CHECKSTYLE\:OFF"/>
-        <property name="onCommentFormat" value="CHECKSTYLE\:ON"/>
-    </module>
-    <module name="SuppressionCommentFilter">
-        <property name="offCommentFormat" value="CHECKSTYLE.OFF\:([\w\|]+)"/>
-        <property name="onCommentFormat" value="CHECKSTYLE.ON\:([\w\|]+)"/>
-        <property name="checkFormat" value="$1"/>
-    </module>
     <module name="SuppressWarningsFilter"/>
     <!-- Header checks -->
     <module name="Header">
