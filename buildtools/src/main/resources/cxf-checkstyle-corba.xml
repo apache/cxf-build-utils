@@ -83,7 +83,7 @@
 		<module name="RedundantImport" />
 		<module name="UnusedImports" />
 		<module name="ImportOrder">
-            <property name="groups" value="java,javax,org.w3c,org.xml,antlr,com,*,/^org\.(easymock|junit)\./" />
+            <property name="groups" value="java,javax,org.w3c,org.xml,antlr,com,*,io,/^org\.(easymock|junit|ops4j\.pax\.exam|ops4j\.pax\.tinybundles|mockito)\./" />
             <property name="ordered" value="true" />
             <property name="separated" value="true"/>
             
