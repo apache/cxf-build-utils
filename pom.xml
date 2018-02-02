@@ -45,8 +45,8 @@
     </distributionManagement>
     <inceptionYear>2006</inceptionYear>
     <scm>
-      <connection>scm:git:http://git-wip-us.apache.org/repos/asf/cxf-build-utils.git</connection>
-      <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/cxf-build-utils.git</developerConnection>
+      <connection>scm:git:https://gitbox.apache.org/repos/asf/cxf-build-utils.git</connection>
+      <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/cxf-build-utils.git</developerConnection>
       <tag>HEAD</tag>
   </scm>
     <mailingLists>
