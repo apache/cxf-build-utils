@@ -122,7 +122,7 @@
                  <plugin>
                      <groupId>org.apache.maven.plugins</groupId>
                      <artifactId>maven-javadoc-plugin</artifactId>
-                     <version>2.10.3</version>
+                     <version>3.0.1</version>
                      <configuration>
                          <attach>true</attach>
                          <source>1.5</source>
@@ -189,7 +189,7 @@
                  <plugin>
                      <groupId>org.apache.maven.plugins</groupId>
                      <artifactId>maven-dependency-plugin</artifactId>
-                     <version>2.10</version>
+                     <version>3.1.1</version>
                  </plugin>
                  <plugin>
                      <groupId>org.apache.maven.plugins</groupId>
@@ -219,7 +219,7 @@
                  <plugin>
                      <groupId>org.apache.maven.plugins</groupId>
                      <artifactId>maven-plugin-plugin</artifactId>
-                     <version>2.9</version>
+                     <version>3.5.2</version>
                  </plugin>
              </plugins>
          </pluginManagement>
