@@ -39,7 +39,7 @@
     <!--<rule ref="rulesets/java/empty.xml/EmptyFinallyBlock"/>-->
     <!--<rule ref="rulesets/java/empty.xml/EmptyIfStmt"/>-->
     <rule ref="rulesets/java/empty.xml/EmptyStatementNotInLoop"/>
-    <!--<rule ref="rulesets/java/empty.xml/EmptyStaticInitializer"/>-->
+    <!--<rule ref="rulesets/java/empty.xml/EmptyInitializer"/>-->
     <!--<rule ref="rulesets/java/empty.xml/EmptySwitchStatements"/>-->
     <!--<rule ref="rulesets/java/empty.xml/EmptySynchronizedBlock"/>-->
     <!--<rule ref="rulesets/java/java/basic.xml/EmptyTryBlock"/>-->
@@ -50,7 +50,7 @@
     <rule ref="rulesets/java/basic.xml/ReturnFromFinallyBlock"/>
     <rule ref="rulesets/java/basic.xml/UnconditionalIfStatement"/>
     <rule ref="rulesets/java/unnecessary.xml/UnnecessaryConversionTemporary"/>
-    <rule ref="rulesets/java/unnecessary.xml/UnnecessaryFinalModifier"/>
+    <rule ref="rulesets/java/unnecessary.xml/UnnecessaryModifier"/>
     <rule ref="rulesets/java/unnecessary.xml/UnnecessaryReturn"/>
     <!--<rule ref="rulesets/java/unnecessary.xml/UselessOverridingMethod"/>-->
 
@@ -79,7 +79,7 @@
     <!--<rule ref="rulesets/java/controversial.xml/SingularField"/>-->
     <!--<rule ref="rulesets/java/controversial.xml/SuspiciousOctalEscape"/>-->
     <!--<rule ref="rulesets/java/controversial.xml/UnnecessaryConstructor"/>-->
-    <!--<rule ref="rulesets/java/controversial.xml/UnnecessaryParentheses"/>-->
+    <!--<rule ref="rulesets/java/unnecessary.xml/UselessParentheses"/>-->
     <!--<rule ref="rulesets/java/controversial.xml/UnusedModifier"/>-->
 
     <!--<rule ref="rulesets/java/coupling.xml/CouplingBetweenObjects"/>-->
