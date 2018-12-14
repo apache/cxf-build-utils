@@ -210,6 +210,7 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
 
         // Instantiate JAXP SAX parser factory
         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+        saxParserFactory.setFeature(javax.xml.XMLConstants.FEATURE_SECURE_PROCESSING, Boolean.TRUE);
         /*
          * Set parser to be namespace aware Very important to do otherwise
          * invalid FI documents will be created by the SAXDocumentSerializer
