@@ -205,7 +205,7 @@
 		</module>
 
 		<module name="IllegalType">
-			<property name="format" value="^xxx$" />
+			<property name="tokens" value="ANNOTATION_FIELD_DEF, INTERFACE_DEF, METHOD_CALL, METHOD_DEF, METHOD_REF, PARAMETER_DEF, VARIABLE_DEF"/>
 			<property name="illegalClassNames"
 				value="java.util.GregorianCalendar, java.util.Hashtable, java.util.HashSet, java.util.HashMap, java.util.ArrayList, java.util.LinkedList, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.TreeSet, java.util.TreeMap" />
 		</module>
