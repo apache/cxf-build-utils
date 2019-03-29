@@ -107,6 +107,7 @@
         <exclude name="AvoidInstanceofChecksInCatchClause" />
         <exclude name="AvoidLiteralsInIfCondition" />
         <exclude name="BeanMembersShouldSerialize" />
+        <exclude name="CloseResource" />
         <exclude name="CompareObjectsWithEquals" />
         <exclude name="ConstructorCallsOverridableMethod" />
         <exclude name="DataflowAnomalyAnalysis" />
@@ -122,6 +123,8 @@
         <exclude name="MoreThanOneLogger" />
         <exclude name="NullAssignment" />
         <exclude name="ReturnEmptyArrayRatherThanNull" />
+        <exclude name="SimpleDateFormatNeedsLocale" />
+        <exclude name="SingleMethodSingleton" />
         <exclude name="SuspiciousEqualsMethodName" />
         <exclude name="TestClassWithoutTestCases" />
         <exclude name="UseLocaleWithCaseConversions" />
