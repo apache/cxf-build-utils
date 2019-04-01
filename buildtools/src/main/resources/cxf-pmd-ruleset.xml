@@ -120,10 +120,12 @@
         <exclude name="EmptyWhileStmt" />
         <exclude name="MissingBreakInSwitch" />
         <exclude name="MissingSerialVersionUID" />
+        <exclude name="MissingStaticMethodInNonInstantiatableClass" />
         <exclude name="MoreThanOneLogger" />
         <exclude name="NullAssignment" />
         <exclude name="ReturnEmptyArrayRatherThanNull" />
         <exclude name="SimpleDateFormatNeedsLocale" />
+        <exclude name="SingletonClassReturningNewInstance" />
         <exclude name="SingleMethodSingleton" />
         <exclude name="SuspiciousEqualsMethodName" />
         <exclude name="TestClassWithoutTestCases" />
