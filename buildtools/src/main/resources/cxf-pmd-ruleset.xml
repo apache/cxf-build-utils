@@ -52,6 +52,7 @@
         <exclude name="JUnit4TestShouldUseBeforeAnnotation" />
         <exclude name="JUnit4TestShouldUseTestAnnotation"/>
         <exclude name="MethodReturnsInternalArray" />
+        <exclude name="MissingOverride" />
         <exclude name="OneDeclarationPerLine" />
         <exclude name="PreserveStackTrace" />
         <exclude name="ReplaceEnumerationWithIterator" />
