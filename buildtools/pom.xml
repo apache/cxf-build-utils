@@ -27,7 +27,7 @@
     <groupId>org.apache.cxf.build-utils</groupId>
     <artifactId>cxf-buildtools</artifactId>
     <name>Apache CXF Buildtools</name>
-    <url>http://cxf.apache.org</url>
+    <url>https://cxf.apache.org</url>
     <packaging>jar</packaging>
 
     <properties>

@@ -29,7 +29,7 @@
     <artifactId>cxf-xml2fastinfoset-plugin</artifactId>
     <packaging>maven-plugin</packaging>
     <name>Apache CXF XML to FastInfoset Maven2 Plugin</name>
-    <url>http://cxf.apache.org</url>
+    <url>https://cxf.apache.org</url>
     <prerequisites>
         <maven>2.0</maven>
     </prerequisites>

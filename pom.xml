@@ -28,7 +28,7 @@
     <artifactId>cxf-build-utils</artifactId>
     <version>3.4.3-SNAPSHOT</version>
     <name>Apache CXF Build Utilities</name>
-    <url>http://cxf.apache.org</url>
+    <url>https://cxf.apache.org</url>
     <packaging>pom</packaging>
 
     <modules>
@@ -55,35 +55,35 @@
             <subscribe>users-subscribe@cxf.apache.org</subscribe>
             <unsubscribe>users-unsubscribe@cxf.apache.org</unsubscribe>
             <post>users@cxf.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/cxf-users</archive>
+            <archive>https://mail-archives.apache.org/mod_mbox/cxf-users</archive>
         </mailingList>
         <mailingList>
             <name>Apache CXF Developer List</name>
             <subscribe>dev-subscribe@cxf.apache.org</subscribe>
             <unsubscribe>dev-unsubscribe@cxf.apache.org</unsubscribe>
             <post>dev@cxf.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/cxf-dev</archive>
+            <archive>https://mail-archives.apache.org/mod_mbox/cxf-dev</archive>
         </mailingList>
         <mailingList>
             <name>Apache CXF Commits List</name>
             <subscribe>commits-subscribe@cxf.apache.org</subscribe>
             <unsubscribe>commits-unsubscribe@cxf.apache.org</unsubscribe>
             <post>commits@cxf.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/cxf-commits</archive>
+            <archive>https://mail-archives.apache.org/mod_mbox/cxf-commits</archive>
         </mailingList>
         <mailingList>
             <name>Apache CXF Issues List</name>
             <subscribe>issues-subscribe@cxf.apache.org</subscribe>
             <unsubscribe>issues-unsubscribe@cxf.apache.org</unsubscribe>
             <post>issues@cxf.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/cxf-issues</archive>
+            <archive>https://mail-archives.apache.org/mod_mbox/cxf-issues</archive>
         </mailingList>
         <mailingList>
             <name>Apache CXF Build Notifications List</name>
             <subscribe>notifications-subscribe@cxf.apache.org</subscribe>
             <unsubscribe>notifications-unsubscribe@cxf.apache.org</unsubscribe>
             <post>notifications@cxf.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/cxf-notifications</archive>
+            <archive>https://mail-archives.apache.org/mod_mbox/cxf-notifications</archive>
         </mailingList>
     </mailingLists>
 
