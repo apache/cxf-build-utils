@@ -31,6 +31,7 @@
     <exclude-pattern>.*.class</exclude-pattern>
     <exclude-pattern>.*.txt</exclude-pattern>
     <exclude-pattern>.*NOTICE</exclude-pattern>
+    <exclude-pattern>.*generated.*</exclude-pattern>
 
     <rule ref="category/java/bestpractices.xml">
         <exclude name="AbstractClassWithoutAbstractMethod" />
@@ -39,10 +40,12 @@
         <exclude name="ArrayIsStoredDirectly" />
         <exclude name="AvoidPrintStackTrace" />
         <exclude name="AvoidReassigningParameters" />
+        <exclude name="AvoidReassigningLoopVariables" />
         <exclude name="AvoidStringBufferField" />
         <exclude name="AvoidUsingHardCodedIP" />
         <exclude name="ConstantsInInterface" />
         <exclude name="ForLoopCanBeForeach" />
+        <exclude name="ForLoopVariableCount" />
         <exclude name="GuardLogStatement" />
         <exclude name="JUnitAssertionsShouldIncludeMessage" />
         <exclude name="JUnitTestContainsTooManyAsserts" />
@@ -71,6 +74,7 @@
         <exclude name="AvoidRethrowingException" />
         <exclude name="AvoidThrowingNullPointerException" />
         <exclude name="AvoidThrowingRawExceptionTypes" />
+        <exclude name="AvoidUncheckedExceptionsInSignatures" />
         <exclude name="CouplingBetweenObjects" />
         <exclude name="CyclomaticComplexity" />
         <exclude name="DataClass" />
