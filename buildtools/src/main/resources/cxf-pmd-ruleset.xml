@@ -53,18 +53,23 @@
         <exclude name="JUnitUseExpected"/>
         <exclude name="JUnit4TestShouldUseAfterAnnotation"/>
         <exclude name="JUnit4TestShouldUseBeforeAnnotation" />
-        <exclude name="JUnit4TestShouldUseTestAnnotation"/>
+        <exclude name="JUnit4TestShouldUseTestAnnotation" />
+        <exclude name="JUnit5TestShouldBePackagePrivate" />
         <exclude name="MethodReturnsInternalArray" />
         <exclude name="MissingOverride" />
+        <exclude name="LiteralsFirstInComparisons" />
         <exclude name="OneDeclarationPerLine" />
         <exclude name="PreserveStackTrace" />
         <exclude name="ReplaceEnumerationWithIterator" />
+        <exclude name="SimplifiableTestAssertion" />
         <exclude name="SwitchStmtsShouldHaveDefault" />
         <exclude name="SystemPrintln" />
+        <exclude name="UnusedAssignment" />
         <exclude name="UnusedFormalParameter" />
         <exclude name="UnusedPrivateMethod" />
         <exclude name="UseAssertEqualsInsteadOfAssertTrue" />
         <exclude name="UseAssertSameInsteadOfAssertTrue" />
+        <exclude name="UseTryWithResources" />
         <exclude name="UseVarargs" />
     </rule>
 
@@ -75,6 +80,7 @@
         <exclude name="AvoidThrowingNullPointerException" />
         <exclude name="AvoidThrowingRawExceptionTypes" />
         <exclude name="AvoidUncheckedExceptionsInSignatures" />
+        <exclude name="CognitiveComplexity" />
         <exclude name="CouplingBetweenObjects" />
         <exclude name="CyclomaticComplexity" />
         <exclude name="DataClass" />
@@ -87,6 +93,7 @@
         <exclude name="ImmutableField" />
         <exclude name="LawOfDemeter" />
         <exclude name="LoosePackageCoupling" />
+        <exclude name="MutableStaticState" />
         <exclude name="NcssCount" />
         <exclude name="NPathComplexity" />
         <exclude name="SignatureDeclareThrowsException" />
@@ -106,6 +113,7 @@
         <exclude name="AvoidAccessibilityAlteration" />
         <exclude name="AvoidCatchingNPE" />
         <exclude name="AvoidCatchingThrowable" />
+        <exclude name="AvoidDecimalLiteralsInBigDecimalConstructor" />
         <exclude name="AvoidDuplicateLiterals" />
         <exclude name="AvoidFieldNameMatchingMethodName" />
         <exclude name="AvoidFieldNameMatchingTypeName" />
@@ -117,18 +125,18 @@
         <exclude name="ConstructorCallsOverridableMethod" />
         <exclude name="DataflowAnomalyAnalysis" />
         <exclude name="DoNotCallGarbageCollectionExplicitly" />
-        <exclude name="DoNotCallSystemExit" />
         <exclude name="DoNotThrowExceptionInFinally" />
         <exclude name="EmptyCatchBlock" />
         <exclude name="EmptyIfStmt" />
         <exclude name="EmptySynchronizedBlock" />
         <exclude name="EmptyWhileStmt" />
-        <exclude name="MissingBreakInSwitch" />
+        <exclude name="ImplicitSwitchFallThrough" />
         <exclude name="MissingSerialVersionUID" />
         <exclude name="MissingStaticMethodInNonInstantiatableClass" />
         <exclude name="MoreThanOneLogger" />
         <exclude name="NullAssignment" />
         <exclude name="ReturnEmptyArrayRatherThanNull" />
+        <exclude name="ReturnEmptyCollectionRatherThanNull" />
         <exclude name="SimpleDateFormatNeedsLocale" />
         <exclude name="SingletonClassReturningNewInstance" />
         <exclude name="SingleMethodSingleton" />
