@@ -59,7 +59,9 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
     private static final String[] DEFAULT_INCLUDES = {"**/*.xml"};
 
     /**
-     * @parameter expression="${project}"
+     * The Maven project containing the XML files to be compiled.
+     *
+     * @parameter default-value="${project}"
      * @required
      * @readonly
      */
@@ -68,7 +70,7 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
     /**
      * The resource directories containing the XML files to be compiled.
      * 
-     * @parameter expression="${project.resources}"
+     * @parameter default-value="${project.resources}"
      * @required
      * @readonly
      */
@@ -91,14 +93,17 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
     /**
      * The directory for the results.
      * 
-     * @parameter expression="${project.build.outputDirectory}"
+     * @parameter default-value="${project.build.outputDirectory}"
      * @required
      */
     private File outputDirectory;
     
-    /** @component */
+    /** 
+     * Build context
+     * 
+     * @component 
+     **/
     protected BuildContext buildContext;
-        
 
     @SuppressWarnings("unchecked")
     public void execute() throws MojoExecutionException {
