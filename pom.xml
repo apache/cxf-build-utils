@@ -125,10 +125,10 @@
                      <version>3.11.1</version>
                      <configuration>
                          <attach>true</attach>
-                         <source>1.6</source>
+                         <source>11</source>
                          <quiet>true</quiet>
                          <bottom>Apache CXF</bottom>
-                         <javadocVersion>1.6</javadocVersion>
+                         <javadocVersion>11</javadocVersion>
                          <encoding>UTF-8</encoding>
                          <detectOfflineLinks>false</detectOfflineLinks>
                          <notimestamp>true</notimestamp>
