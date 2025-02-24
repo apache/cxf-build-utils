@@ -31,7 +31,7 @@ import net.sourceforge.pmd.lang.java.ast.ASTClassOrInterfaceType;
 import net.sourceforge.pmd.lang.java.ast.ASTExpression;
 import net.sourceforge.pmd.lang.java.ast.ASTName;
 import net.sourceforge.pmd.lang.java.ast.JavaNode;
-import net.sourceforge.pmd.lang.java.typeresolution.TypeHelper;
+import net.sourceforge.pmd.lang.java.types.TypeTestUtil;
 
 /**
  * Look for new String(byte[]) or new String(byte[], start, end)
@@ -42,11 +42,11 @@ public class UnsafeStringConstructorRule extends AbstractJavaRule {
     /** {@inheritDoc} */
     @Override
     public Object visit(ASTAllocationExpression node, Object data) {
-        if (!(node.jjtGetChild(0) instanceof ASTClassOrInterfaceType)) {
+        if (!(node.getChild(0) instanceof ASTClassOrInterfaceType)) {
             return data;
         }
 
-        if (!TypeHelper.isA((ASTClassOrInterfaceType)node.jjtGetChild(0), String.class)) {
+        if (!TypeTestUtil.isA(String.class, (ASTClassOrInterfaceType)node.getChild(0))) {
             return data;
         }
         
@@ -56,7 +56,7 @@ public class UnsafeStringConstructorRule extends AbstractJavaRule {
         }
         
         // one of the two possibilities ...
-        if (arglist.jjtGetNumChildren() == 1 || arglist.jjtGetNumChildren() == 3) {
+        if (arglist.getNumChildren() == 1 || arglist.getNumChildren() == 3) {
             ASTExpression firstArgExpr = arglist.getFirstChildOfType(ASTExpression.class);
             Class<?> exprType = firstArgExpr.getType();
             // pmd reports the type as byte, not byte[]. But since
@@ -65,7 +65,7 @@ public class UnsafeStringConstructorRule extends AbstractJavaRule {
             if (exprType != null) {
                 if (exprType == Byte.TYPE || 
                     (exprType.isArray() && exprType.getComponentType() == Byte.TYPE)) {
-                    addViolation(data, node);
+                        asCtx(data).addViolation(node);
                 }
             }
         }
