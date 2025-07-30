@@ -76,8 +76,6 @@
         <exclude name="UseTryWithResources" />
         <exclude name="UseVarargs" />
         <exclude name="ImplicitFunctionalInterface" />
-        <exclude name="ReplaceJavaUtilDate" />
-        <exclude name="ReplaceJavaUtilCalendar" />
     </rule>
     <rule ref="category/java/design.xml" >
         <exclude name="AvoidCatchingGenericException" />
@@ -144,6 +142,8 @@
         <exclude name="TestClassWithoutTestCases" />
         <exclude name="UseLocaleWithCaseConversions" />
         <exclude name="UseProperClassLoader" />
+        <exclude name="ReplaceJavaUtilDate" />
+        <exclude name="ReplaceJavaUtilCalendar" />
     </rule>
     <rule ref="category/java/multithreading.xml">
         <exclude name="AvoidUsingVolatile" />
