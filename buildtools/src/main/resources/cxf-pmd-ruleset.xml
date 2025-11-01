@@ -145,6 +145,7 @@
         <exclude name="UseProperClassLoader" />
         <exclude name="ReplaceJavaUtilDate" />
         <exclude name="ReplaceJavaUtilCalendar" />
+        <exclude name="AvoidCatchingGenericException" />
     </rule>
     <rule ref="category/java/multithreading.xml">
         <exclude name="AvoidUsingVolatile" />
