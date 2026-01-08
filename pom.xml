@@ -26,7 +26,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apache.cxf.build-utils</groupId>
     <artifactId>cxf-build-utils</artifactId>
-    <version>4.1.3-SNAPSHOT</version>
+    <version>4.1.3</version>
     <name>Apache CXF Build Utilities</name>
     <url>https://cxf.apache.org</url>
     <packaging>pom</packaging>
@@ -47,7 +47,7 @@
     <scm>
       <connection>scm:git:https://gitbox.apache.org/repos/asf/cxf-build-utils.git</connection>
       <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/cxf-build-utils.git</developerConnection>
-      <tag>cxf-build-utils-4.1.2</tag>
+      <tag>cxf-build-utils-4.1.3</tag>
   </scm>
     <mailingLists>
         <mailingList>
