@@ -108,6 +108,7 @@
         <exclude name="UseObjectForClearerAPI" />
         <exclude name="UseUtilityClass" />
         <exclude name="UselessOverridingMethod" />
+        <exclude name="PublicMemberInNonPublicType" />
     </rule>
 
     <rule ref="category/java/errorprone.xml">
