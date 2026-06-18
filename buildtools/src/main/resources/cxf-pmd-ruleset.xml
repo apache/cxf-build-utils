@@ -49,7 +49,6 @@
         <exclude name="ForLoopVariableCount" />
         <exclude name="GuardLogStatement" />
         <exclude name="JUnitUseExpected"/>
-        <exclude name="JUnit5TestShouldBePackagePrivate" />
         <exclude name="LooseCoupling" />
         <exclude name="MethodReturnsInternalArray" />
         <exclude name="MissingOverride" />
