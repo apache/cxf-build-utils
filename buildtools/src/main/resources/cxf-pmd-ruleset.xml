@@ -146,6 +146,8 @@
         <exclude name="ReplaceJavaUtilDate" />
         <exclude name="ReplaceJavaUtilCalendar" />
         <exclude name="AvoidCatchingGenericException" />
+        <exclude name="WrongTestAnnotation" />
+        <exclude name="AssertEqualsArgumentOrder" />
     </rule>
     <rule ref="category/java/multithreading.xml">
         <exclude name="AvoidUsingVolatile" />
