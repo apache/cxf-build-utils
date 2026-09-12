@@ -75,7 +75,8 @@
         <exclude name="UseTryWithResources" />
         <exclude name="UseVarargs" />
         <exclude name="ImplicitFunctionalInterface" />
-        <exclude name="RelianceOnDefaultCharset" />        
+        <exclude name="RelianceOnDefaultCharset" />
+        <exclude name="UnnecessaryWarningSuppression" />
     </rule>
     <rule ref="category/java/design.xml" >
         <exclude name="AvoidCatchingGenericException" />
