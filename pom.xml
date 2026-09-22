@@ -115,7 +115,7 @@
                          <useReleaseProfile>false</useReleaseProfile>
                          <preparationGoals>clean install</preparationGoals>
                          <goals>deploy</goals>
-                         <arguments>-Prelease,deploy,apache-release</arguments>
+                         <arguments>-Prelease,deploy,apache-release -T 1</arguments>
                          <autoVersionSubmodules>true</autoVersionSubmodules>
                      </configuration>
                  </plugin>
