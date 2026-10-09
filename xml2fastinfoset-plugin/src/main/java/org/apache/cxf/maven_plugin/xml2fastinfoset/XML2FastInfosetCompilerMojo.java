@@ -161,12 +161,17 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
                 String destination = name.replaceFirst("\\.xml$", ".fixml");
 
                 if (targetPath != null) {
-                    destination = targetPath + "/" + name;
+                    destination = targetPath + "/" + destination;
                 }
                 
                 File source = new File(resourceDirectory, name);
 
                 File destinationFile = new File(outputDirectory, destination);
+
+                // Don't follow symbolic links out of the resource directory, and don't write
+                // outside of the output directory
+                checkWithin(source, resourceDirectory);
+                checkWithin(destinationFile, outputDirectory);
 
                 if (!destinationFile.getParentFile().exists()) {
                     destinationFile.getParentFile().mkdirs();
@@ -180,6 +185,16 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
                 buildContext.refresh(destinationFile);
             }
 
+        }
+    }
+
+    private static void checkWithin(File file, File directory) throws MojoExecutionException {
+        try {
+            if (!file.getCanonicalFile().toPath().startsWith(directory.getCanonicalFile().toPath())) {
+                throw new MojoExecutionException(file + " resolves to a location outside of " + directory);
+            }
+        } catch (IOException e) {
+            throw new MojoExecutionException("Cannot resolve the canonical path of " + file, e);
         }
     }
 
