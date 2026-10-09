@@ -20,11 +20,13 @@
 package org.apache.cxf.maven_plugin.xml2fastinfoset;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.AtomicMoveNotSupportedException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -184,24 +186,27 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
     private void compileFile(File sourceFile, File destinationFile) throws ParserConfigurationException,
         SAXException, IOException {
 
-        FileInputStream fis = null;
-        FileOutputStream fos = null;
+        // Write to a temporary file and only move it into place once the conversion has succeeded,
+        // so that a failed conversion never leaves a partial or stale destination file behind.
+        Path destination = destinationFile.toPath();
+        Path tmp = destination.resolveSibling(destination.getFileName() + ".tmp");
+        boolean success = false;
         try {
-            fis = new FileInputStream(sourceFile);
-            fos = new FileOutputStream(destinationFile);
-            dehydrate(fis, fos);
-            fis.close();
-            fos.close();
-        } finally {
+            try (InputStream is = Files.newInputStream(sourceFile.toPath());
+                OutputStream os = Files.newOutputStream(tmp)) {
+                dehydrate(is, os);
+            }
             try {
-                if (fis != null) {
-                    fis.close();
-                }
-                if (fos != null) {
-                    fos.close();
-                }
-            } catch (Exception e) {
-                // nothing.
+                Files.move(tmp, destination, StandardCopyOption.REPLACE_EXISTING,
+                           StandardCopyOption.ATOMIC_MOVE);
+            } catch (AtomicMoveNotSupportedException e) {
+                Files.move(tmp, destination, StandardCopyOption.REPLACE_EXISTING);
+            }
+            success = true;
+        } finally {
+            Files.deleteIfExists(tmp);
+            if (!success) {
+                Files.deleteIfExists(destination);
             }
         }
     }
