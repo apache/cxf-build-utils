@@ -33,37 +33,4 @@
     <properties>
         <maven.test.skip>true</maven.test.skip>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-utils</artifactId>
-            <version>4.1.0</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-plugin-api</artifactId>
-            <version>3.10.0</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-model</artifactId>
-            <version>3.10.0</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-project</artifactId>
-            <version>2.2.1</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.pmd</groupId>
-            <artifactId>pmd-java</artifactId>
-            <version>7.28.0</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 </project>
