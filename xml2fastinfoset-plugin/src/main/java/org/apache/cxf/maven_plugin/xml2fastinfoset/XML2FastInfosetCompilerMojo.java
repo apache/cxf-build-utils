@@ -29,7 +29,6 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -37,7 +36,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import org.sonatype.plexus.build.incremental.BuildContext;
 import org.xml.sax.SAXException;
 
 import com.sun.xml.fastinfoset.sax.SAXDocumentSerializer;
@@ -50,15 +48,14 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
-import org.codehaus.plexus.util.DirectoryScanner;
 import org.codehaus.plexus.util.Scanner;
+import org.sonatype.plexus.build.incremental.BuildContext;
 
 /**
  * Compile XML resources to FastInfoset XML resources.
  */
 @Mojo(name = "xml2fastinfoset", defaultPhase = LifecyclePhase.PROCESS_RESOURCES, threadSafe = true)
 public class XML2FastInfosetCompilerMojo extends AbstractMojo {
-    private static final String[] EMPTY_STRING_ARRAY = {};
     private static final String[] DEFAULT_INCLUDES = {"**/*.xml"};
 
     /**
@@ -71,19 +68,19 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
      * The resource directories containing the XML files to be compiled.
      */
     @Parameter(defaultValue = "${project.resources}", required = true, readonly = true)
-    private List resources;
+    private List<Resource> resources;
 
     /**
      * A list of inclusion filters.
      */
     @Parameter
-    private Set includes = new HashSet();
+    private Set<String> includes = new HashSet<>();
 
     /**
      * A list of exclusion filters.
      */
     @Parameter
-    private Set excludes = new HashSet();
+    private Set<String> excludes = new HashSet<>();
 
     /**
      * The directory for the results.
@@ -95,13 +92,11 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
      * Build context
      */
     @Component
-    protected BuildContext buildContext;
+    private BuildContext buildContext;
 
-    @SuppressWarnings("unchecked")
     public void execute() throws MojoExecutionException {
 
-        for (Iterator it = resources.iterator(); it.hasNext();) {
-            Resource resource = (Resource)it.next();
+        for (Resource resource : resources) {
             String targetPath = resource.getTargetPath();
 
             File resourceDirectory = new File(resource.getDirectory());
@@ -117,37 +112,33 @@ public class XML2FastInfosetCompilerMojo extends AbstractMojo {
             Scanner scanner = buildContext.newScanner(resourceDirectory);
 
             if (includes != null && !includes.isEmpty()) {
-                scanner.setIncludes((String[])includes.toArray(EMPTY_STRING_ARRAY));
+                scanner.setIncludes(includes.toArray(new String[0]));
             } else {
                 scanner.setIncludes(DEFAULT_INCLUDES);
             }
 
             if (excludes != null && !excludes.isEmpty()) {
-                scanner.setExcludes((String[])excludes.toArray(EMPTY_STRING_ARRAY));
+                scanner.setExcludes(excludes.toArray(new String[0]));
             }
 
             scanner.addDefaultExcludes();
             scanner.scan();
 
-            List includedFiles = Arrays.asList(scanner.getIncludedFiles());
+            List<String> includedFiles = Arrays.asList(scanner.getIncludedFiles());
 
             getLog().debug("FastInfosetting " + includedFiles.size() + " resource"
                               + (includedFiles.size() > 1 ? "s" : "")
                               + (targetPath == null ? "" : " to " + targetPath));
 
-            if (includedFiles.size() > 0) {
-                // this part is required in case the user specified "../something"
-                // as destination
-                // see MNG-1345
-                if (!outputDirectory.exists() && !outputDirectory.mkdirs()) {
-                    throw new MojoExecutionException("Cannot create resource output directory: "
-                                                     + outputDirectory);
-                }
+            // this part is required in case the user specified "../something"
+            // as destination
+            // see MNG-1345
+            if (!includedFiles.isEmpty() && !outputDirectory.exists() && !outputDirectory.mkdirs()) {
+                throw new MojoExecutionException("Cannot create resource output directory: "
+                                                 + outputDirectory);
             }
             
-            for (Iterator j = includedFiles.iterator(); j.hasNext();) {
-                String name = (String)j.next();
-
+            for (String name : includedFiles) {
                 String destination = name.replaceFirst("\\.xml$", ".fixml");
 
                 if (targetPath != null) {
