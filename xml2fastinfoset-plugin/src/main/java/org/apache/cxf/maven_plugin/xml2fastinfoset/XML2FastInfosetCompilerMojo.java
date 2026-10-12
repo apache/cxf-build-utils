@@ -45,66 +45,56 @@ import com.sun.xml.fastinfoset.sax.SAXDocumentSerializer;
 import org.apache.maven.model.Resource;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugins.annotations.Component;
+import org.apache.maven.plugins.annotations.LifecyclePhase;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.DirectoryScanner;
 import org.codehaus.plexus.util.Scanner;
 
 /**
  * Compile XML resources to FastInfoset XML resources.
- * 
- * @goal xml2fastinfoset
- * @phase process-resources
- * @threadSafe
  */
+@Mojo(name = "xml2fastinfoset", defaultPhase = LifecyclePhase.PROCESS_RESOURCES, threadSafe = true)
 public class XML2FastInfosetCompilerMojo extends AbstractMojo {
     private static final String[] EMPTY_STRING_ARRAY = {};
     private static final String[] DEFAULT_INCLUDES = {"**/*.xml"};
 
     /**
      * The Maven project containing the XML files to be compiled.
-     *
-     * @parameter default-value="${project}"
-     * @required
-     * @readonly
      */
+    @Parameter(defaultValue = "${project}", required = true, readonly = true)
     private MavenProject project;
 
     /**
      * The resource directories containing the XML files to be compiled.
-     * 
-     * @parameter default-value="${project.resources}"
-     * @required
-     * @readonly
      */
+    @Parameter(defaultValue = "${project.resources}", required = true, readonly = true)
     private List resources;
 
     /**
      * A list of inclusion filters.
-     * 
-     * @parameter
      */
+    @Parameter
     private Set includes = new HashSet();
 
     /**
      * A list of exclusion filters.
-     * 
-     * @parameter
      */
+    @Parameter
     private Set excludes = new HashSet();
 
     /**
      * The directory for the results.
-     * 
-     * @parameter default-value="${project.build.outputDirectory}"
-     * @required
      */
+    @Parameter(defaultValue = "${project.build.outputDirectory}", required = true)
     private File outputDirectory;
     
-    /** 
+    /**
      * Build context
-     * 
-     * @component 
-     **/
+     */
+    @Component
     protected BuildContext buildContext;
 
     @SuppressWarnings("unchecked")
