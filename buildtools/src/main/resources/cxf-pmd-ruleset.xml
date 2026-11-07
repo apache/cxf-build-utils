@@ -78,6 +78,7 @@
         <exclude name="RelianceOnDefaultCharset" />
         <exclude name="UnnecessaryWarningSuppression" />
         <exclude name="TypeNameMismatch" />
+        <exclude name="ReplaceJavaUtilVector" />
     </rule>
     <rule ref="category/java/design.xml" >
         <exclude name="AvoidCatchingGenericException" />
